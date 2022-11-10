@@ -14,10 +14,6 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    <script >
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -53,8 +49,58 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
           <li class="nav-item">
             <a href="index.html" class="nav-link">Home</a>
           </li>
-          <li class="nav-item ps-2">
+          <li class="nav-item px-2">
             <a href="#" class="nav-link active" aria-current="page">About us</a>
+          </li>
+          <li>
+            <a
+              class="btn btn-danger mx-3"
+              data-bs-toggle="offcanvas"
+              href="#offcanvasExample"
+              role="button"
+              aria-controls="offcanvasExample"
+            >
+              Register!!
+            </a>
+
+            <div
+              class="offcanvas offcanvas-start"
+              tabindex="-1"
+              id="offcanvasExample"
+              aria-labelledby="offcanvasExampleLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                  Register!
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <div>
+                  <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
           </li>
         </ul>
       </header>
@@ -92,7 +138,11 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
             <h4>Item 1</h4>
             <p>
               Lorem ipsum dolor sit, amet consectetur
-              <a href="#" data-bs-toggle="tooltip" data-bs-title="😴😎" data-bs-placement="top"
+              <a
+                href="#"
+                data-bs-toggle="tooltip"
+                data-bs-title="😴😎"
+                data-bs-placement="top"
                 >adipisicing elit</a
               >. Asperiores possimus rem, illo sed odit molestiae quod
               explicabo! Eligendi dolore repudiandae, corporis provident rem
@@ -212,5 +262,25 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
         </div>
       </div>
     </div>
+
+    <div class="toast" id="liveToast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="..." class="rounded me-2" alt="...">
+        <strong class="me-auto">Bootstrap</strong>
+        <small>11 mins ago</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Hello, world! This is a toast message.
+      </div>
+    </div>
+    
+    <script>
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+      const toastSelector = document.getElementById('liveToast')
+      const toast = new bootstrap.Toast(toastSelector)
+      toast.show()
+  </script>
   </body>
 </html>
