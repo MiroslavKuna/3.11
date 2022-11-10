@@ -84,19 +84,42 @@
                 <div>
                   <form>
                     <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                      <label for="exampleInputEmail1" class="form-label"
+                        >Email address</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                      />
+                      <div id="emailHelp" class="form-text">
+                        We'll never share your email with anyone else.
+                      </div>
                     </div>
                     <div class="mb-3">
-                      <label for="exampleInputPassword1" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
+                      <label for="exampleInputPassword1" class="form-label"
+                        >Password</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="exampleInputPassword1"
+                      />
                     </div>
                     <div class="mb-3 form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="exampleCheck1"
+                      />
+                      <label class="form-check-label" for="exampleCheck1"
+                        >Check me out</label
+                      >
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">
+                      Submit
+                    </button>
                   </form>
                 </div>
               </div>
@@ -263,24 +286,82 @@
       </div>
     </div>
 
-    <div class="toast" id="liveToast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div
+      class="toast sticky-bottom mx-3"
+      id="liveToast"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      data-bs-autohide="false"
+    >
       <div class="toast-header">
-        <img src="..." class="rounded me-2" alt="...">
-        <strong class="me-auto">Bootstrap</strong>
-        <small>11 mins ago</small>
-        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        <img src="img/Aneta.jpg" class="rounded me-2" alt="Aneta" id="Scam" />
+        <strong class="me-auto">909-370-4142</strong>
+        <small>3 seconds ago</small>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
       </div>
       <div class="toast-body">
-        Hello, world! This is a toast message.
+        Aneta ti poslat 4 fotografie!!
+        <button
+          type="button"
+          class="btn btn-success"
+          data-bs-toggle="modal"
+          data-bs-target="#scamModal"
+        >
+          Odpověď
+        </button>
       </div>
     </div>
-    
+
+    <div
+      class="modal fade"
+      id="scamModal"
+      tabindex="-1"
+      aria-labelledby="scamModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="scamModal">LMAO U GOT BAITED</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            YOU ARE AN IDIOT HAHAHAHAHAHAHAYOU ARE AN IDIOT HAHAHAHAHAHAHAYOU
+            ARE AN IDIOT HAHAHAHAHAHAHAYOU ARE AN IDIOT HAHAHAHAHAHAHAYOU ARE AN
+            IDIOT HAHAHAHAHAHAHAYOU ARE AN IDIOT HAHAHAHAHAHAHAYOU ARE AN IDIOT
+            HAHAHAHAHAHAHAYOU ARE AN IDIOT HAHAHAHAHAHAHAYOU ARE AN IDIOT
+            HAHAHAHAHAHAHAYOU ARE AN IDIOT HAHAHAHAHAHAHAYOU ARE AN IDIOT
+            HAHAHAHAHAHAHAYOU ARE AN IDIOT HAHAHAHAHAHAHAYOU ARE AN IDIOT
+            HAHAHAHAHAHAHAYOU ARE AN IDIOT HAHAHAHAHAHAHA
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">GETREKT😎😎</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script>
-      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-      const toastSelector = document.getElementById('liveToast')
-      const toast = new bootstrap.Toast(toastSelector)
-      toast.show()
-  </script>
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+      const toastSelector = document.getElementById("liveToast");
+      const toast = new bootstrap.Toast(toastSelector);
+      toast.show();
+    </script>
   </body>
 </html>
